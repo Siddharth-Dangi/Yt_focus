@@ -1,0 +1,28 @@
+.yt-focus-overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.85);
+    z-index: 9999;
+    pointer-events: none;
+
+}
+
+#focus-button{
+    background-color: #222;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    margin:12px 0;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.2s ease;
+}
+
+
+#focus-button:hover{
+    background-color: #444;
+}
