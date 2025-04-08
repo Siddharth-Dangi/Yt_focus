@@ -7,9 +7,19 @@ function createToggleButton() {
     let overlay = null;
 
     button.addEventListener('click', () => {
+        const player = document.getElementById('player');
+        const rect = player.getBoundingClientRect();
+
         if (!overlay) {
             overlay = document.createElement('div');
             overlay.className = 'yt-focus-overlay';
+            overlay.style.clipPath = `polygon(
+                0% 0%, 100% 0%, 100% ${rect.top}px, 
+                0% ${rect.top}px,
+                0% ${rect.bottom}px, 100% ${rect.bottom}px,
+                100% 100%, 0% 100%
+            )`;
+
             document.body.appendChild(overlay);
             button.textContent = 'Exit';
         } else {
@@ -20,6 +30,19 @@ function createToggleButton() {
     });
 }
 
+// Block Shorts across YouTube
+const style = document.createElement('style');
+style.textContent = `
+  ytd-reel-shelf-renderer,
+  ytd-reel-item-renderer,
+  a[href*="/shorts"],
+  ytd-reel-video-renderer {
+    display: none !important;
+  }
+`;
+document.head.appendChild(style);
+
+//  Run only on normal videos
 if (window.location.href.includes('/watch')) {
     const checkExist = setInterval(() => {
         const container = document.getElementById('player');

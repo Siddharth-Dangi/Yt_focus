@@ -1,10 +1,10 @@
-{
-    "mainfest_version": 3,
+
+{   
+    "manifest_version": 3,
     "name": "YouTube Focus",
     "version": "1.0",
     "description": "A Chrome extension to enhance your YouTube experience by focusing on the video player.",
     "permissions": [
-        "tabs",
         "activeTab",
         "scripting"
     ],
@@ -12,13 +12,13 @@
         {
             "matches": ["*://www.youtube.com/*"],
             "js": ["content.js"],
-            "css": ["styles.css"]
+            "css": ["style.css"]
         }
     ],
     "icons":{
-        "16": "icon.png",
-        "48": "icon.png",
-        "128": "icon.png"
+         "16": "icon.png",
+  "48": "icon.png",
+  "128": "icon.png"
     }
 
 }
