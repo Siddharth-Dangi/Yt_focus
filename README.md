@@ -1,2 +1,5 @@
 ## 📦 Download
-[![Download Extension](https://img.shields.io/badge/Download-Yt__focus-blue?style=for-the-badge&logo=google-chrome)](https://github.com/Siddharth-Dangi/Yt_focus/raw/main/Yt_focus.zip)
+
+Install the extension manually by downloading the ZIP file below and loading it via `chrome://extensions/` in Developer Mode.
+
+[![Download Extension](https://img.shields.io/badge/Download-Youtube__Focus-blue?style=for-the-badge&logo=google-chrome)](https://github.com/Siddharth-Dangi/yt_focus/raw/main/Youtube_Focus.zip)
